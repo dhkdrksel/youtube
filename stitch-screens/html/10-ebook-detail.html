@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Architecting Intelligence - AETHER AI</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-fixed": "#002022",
+                      "secondary": "#ffffff",
+                      "surface-container-high": "#292a2d",
+                      "tertiary": "#00dbe9",
+                      "on-primary": "#67001d",
+                      "holographic-blue": "#00f0ff",
+                      "on-error-container": "#ffdad6",
+                      "background": "#121316",
+                      "secondary-fixed-dim": "#b6d300",
+                      "surface": "#121316",
+                      "on-tertiary-container": "#000607",
+                      "on-tertiary": "#00363a",
+                      "surface-container-low": "#1a1b1e",
+                      "pure-white": "#ffffff",
+                      "pitch-black": "#000000",
+                      "inverse-surface": "#e3e2e6",
+                      "error-container": "#93000a",
+                      "silver-mist": "#9ea0a9",
+                      "deep-slate": "#272c33",
+                      "graphite-base": "#0d0d0e",
+                      "on-error": "#690005",
+                      "on-primary-container": "#ffffff",
+                      "surface-dim": "#121316",
+                      "surface-container-highest": "#343538",
+                      "primary-fixed": "#ffdadb",
+                      "error": "#ffb4ab",
+                      "on-tertiary-fixed-variant": "#004f54",
+                      "on-surface-variant": "#e4bdbf",
+                      "inverse-on-surface": "#2f3033",
+                      "primary-container": "#e32652",
+                      "surface-container-lowest": "#0d0e11",
+                      "on-primary-fixed": "#40000f",
+                      "outline": "#ab888a",
+                      "tertiary-fixed-dim": "#00dbe9",
+                      "surface-variant": "#343538",
+                      "on-primary-fixed-variant": "#91002c",
+                      "tertiary-container": "#00848d",
+                      "surface-container": "#1e2022",
+                      "on-background": "#e3e2e6",
+                      "surface-tint": "#ffb2b8",
+                      "secondary-fixed": "#d0f100",
+                      "on-secondary-container": "#5c6b00",
+                      "primary-fixed-dim": "#ffb2b8",
+                      "outline-variant": "#5b3f41",
+                      "surface-bright": "#38393c",
+                      "inverse-primary": "#be003d",
+                      "secondary-container": "#d0f100",
+                      "on-secondary-fixed-variant": "#404c00",
+                      "on-surface": "#e3e2e6",
+                      "tertiary-fixed": "#7df4ff",
+                      "on-secondary": "#2c3400",
+                      "on-secondary-fixed": "#181e00",
+                      "primary": "#ffb2b8"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "md": "24px",
+                      "gutter": "24px",
+                      "xl": "80px",
+                      "margin-desktop": "64px",
+                      "lg": "48px",
+                      "section-gap": "112px",
+                      "xs": "8px",
+                      "sm": "16px",
+                      "margin-mobile": "16px",
+                      "base": "4px"
+              },
+              "fontFamily": {
+                      "body-lg": [
+                              "inter"
+                      ],
+                      "headline-md": [
+                              "inter"
+                      ],
+                      "display-hero-mobile": [
+                              "anton"
+                      ],
+                      "display-hero": [
+                              "anton"
+                      ],
+                      "label-caps": [
+                              "inter"
+                      ],
+                      "headline-lg": [
+                              "anton"
+                      ],
+                      "body-md": [
+                              "inter"
+                      ]
+              },
+              "fontSize": {
+                      "body-lg": [
+                              "20px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-hero-mobile": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-hero": [
+                              "80px",
+                              {
+                                      "lineHeight": "0.9",
+                                      "letterSpacing": "-0.04em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="bg-background/80 backdrop-blur-xl docked full-width top-0 sticky z-50 border-b border-white/10 hidden md:flex">
+<div class="flex justify-between items-center px-margin-desktop py-md max-w-1440 mx-auto w-full">
+<div class="font-display-hero text-headline-lg uppercase text-primary">
+                AETHER AI
+            </div>
+<ul class="flex items-center gap-md">
+<li><a class="text-on-surface/70 hover:text-on-surface transition-colors pb-2 hover:text-holographic-blue transition-all duration-300 font-headline-md text-headline-md tracking-tight" href="05-explore-courses.html">Courses</a></li>
+<li><a class="text-on-surface/70 hover:text-on-surface transition-colors pb-2 hover:text-holographic-blue transition-all duration-300 font-headline-md text-headline-md tracking-tight" href="08-main-landing-page.html">Instructors</a></li>
+<li><a class="text-on-surface/70 hover:text-on-surface transition-colors pb-2 hover:text-holographic-blue transition-all duration-300 font-headline-md text-headline-md tracking-tight" href="05-explore-courses.html">Academy</a></li>
+<li><a class="text-on-surface/70 hover:text-on-surface transition-colors pb-2 hover:text-holographic-blue transition-all duration-300 font-headline-md text-headline-md tracking-tight" href="01-login.html">About</a></li>
+</ul>
+<div class="flex items-center gap-sm">
+<button class="font-headline-md text-headline-md tracking-tight text-primary hover:text-holographic-blue transition-all duration-300 scale-95 active:scale-90 duration-200">Sign In</button>
+<button class="bg-primary-container text-on-primary-container font-headline-md text-headline-md tracking-tight px-sm py-xs rounded-DEFAULT hover:bg-holographic-blue hover:text-pitch-black transition-all duration-300 scale-95 active:scale-90 duration-200">Join Premium</button>
+</div>
+</div>
+</nav>
+<!-- SideNavBar (Mobile) -->
+<nav class="md:hidden fixed left-0 top-0 h-full w-64 bg-pitch-black/90 backdrop-blur-3xl border-r border-holographic-blue/20 shadow-[0_0_40px_rgba(0,240,255,0.1)] flex flex-col pt-32 pb-8 z-40 transform -translate-x-full transition-transform duration-300" id="mobile-nav">
+<div class="px-md mb-lg">
+<div class="font-display-hero text-headline-md text-primary mb-sm">AETHER AI</div>
+<div class="text-silver-mist font-body-md">Welcome, Explorer</div>
+<div class="text-silver-mist/70 font-label-caps text-label-caps">Level 4 Intelligence</div>
+</div>
+<ul class="flex flex-col gap-sm flex-1 overflow-y-auto">
+<li><a class="flex items-center gap-sm text-silver-mist hover:bg-surface-container px-md py-sm transition-all hover:bg-deep-slate hover:text-pure-white font-body-md text-body-md hover:translate-x-1 duration-300" href="06-dashboard.html"><span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>Dashboard</a></li>
+<li><a class="flex items-center gap-sm text-silver-mist hover:bg-surface-container px-md py-sm transition-all hover:bg-deep-slate hover:text-pure-white font-body-md text-body-md hover:translate-x-1 duration-300" href="08-main-landing-page.html"><span class="material-symbols-outlined" data-icon="school">school</span>My Courses</a></li>
+<li><a class="flex items-center gap-sm bg-tertiary-container/30 text-holographic-blue border-r-4 border-holographic-blue px-md py-sm font-body-md text-body-md hover:translate-x-1 duration-300" href="09-ebook-library.html"><span class="material-symbols-outlined" data-icon="smart_toy">smart_toy</span>Resources</a></li>
+<li><a class="flex items-center gap-sm text-silver-mist hover:bg-surface-container px-md py-sm transition-all hover:bg-deep-slate hover:text-pure-white font-body-md text-body-md hover:translate-x-1 duration-300" href="07-instructor-profile.html"><span class="material-symbols-outlined" data-icon="library_books">library_books</span>AI Tutor</a></li>
+<li><a class="flex items-center gap-sm text-silver-mist hover:bg-surface-container px-md py-sm transition-all hover:bg-deep-slate hover:text-pure-white font-body-md text-body-md hover:translate-x-1 duration-300" href="#"><span class="material-symbols-outlined" data-icon="settings">settings</span>Settings</a></li>
+</ul>
+<div class="mt-auto px-md space-y-sm bg-graphite-base/50 py-sm">
+<button class="w-full bg-primary-container text-on-primary-container font-body-md py-xs rounded-DEFAULT hover:bg-holographic-blue hover:text-pitch-black transition-all">Ask AI Assistant</button>
+<a class="flex items-center gap-sm text-silver-mist hover:text-pure-white font-body-md py-xs transition-colors" href="#"><span class="material-symbols-outlined" data-icon="help">help</span>Help</a>
+<a class="flex items-center gap-sm text-silver-mist hover:text-pure-white font-body-md py-xs transition-colors" href="#"><span class="material-symbols-outlined" data-icon="logout">logout</span>Logout</a>
+</div>
+</nav>
+<button class="md:hidden fixed top-sm left-sm z-50 text-pure-white bg-surface-container p-xs rounded-DEFAULT" onclick="document.getElementById('mobile-nav').classList.toggle('-translate-x-full')">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<main class="flex-1 max-w-1440 mx-auto w-full px-margin-mobile md:px-margin-desktop py-xl">
+<!-- Hero Section -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center mb-section-gap relative">
+<!-- Subtle background glow -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-[800px] max-h-[800px] bg-tertiary rounded-[100%] opacity-5 blur-[150px] pointer-events-none"></div>
+<div class="md:col-span-6 flex flex-col gap-lg z-10">
+<div class="flex flex-col gap-sm">
+<span class="font-label-caps text-label-caps text-holographic-blue uppercase tracking-widest">Exclusive eBook Release</span>
+<h1 class="font-display-hero-mobile md:font-display-hero text-display-hero-mobile md:text-display-hero text-pure-white uppercase">
+                        Architecting Intelligence
+                    </h1>
+<p class="font-body-lg text-body-lg text-silver-mist max-w-[500px]">
+                        A foundational blueprint for designing scalable, ethical, and high-performance neural networks. Master the midnight architecture of modern AI.
+                    </p>
+</div>
+<div class="flex flex-col sm:flex-row gap-md items-start sm:items-center">
+<button class="bg-primary-container text-pure-white font-body-lg text-body-lg px-lg py-sm rounded-xl hover:bg-holographic-blue hover:text-pitch-black transition-all duration-300 w-full sm:w-auto text-center shadow-[0_0_20px_rgba(227,38,82,0.3)]">
+                        Purchase eBook - $49
+                    </button>
+<button class="border border-holographic-blue/50 text-holographic-blue font-body-lg text-body-lg px-lg py-sm rounded-xl hover:bg-holographic-blue/10 transition-all duration-300 w-full sm:w-auto text-center">
+                        Read Sample
+                    </button>
+</div>
+</div>
+<div class="md:col-span-6 flex justify-center md:justify-end z-10 relative mt-xl md:mt-0">
+<!-- 3D Book Cover Representation -->
+<div class="relative w-[300px] md:w-[400px] aspect-[3/4] perspective-1000">
+<div class="absolute inset-0 bg-deep-slate rounded-lg shadow-[0_20px_50px_rgba(0,0,0,0.8)] border border-holographic-blue/20 overflow-hidden transform rotate-y-[-15deg] rotate-x-[5deg] transition-transform hover:rotate-y-[0deg] duration-500">
+<img alt="Architecting Intelligence Book Cover" class="w-full h-full object-cover opacity-80 mix-blend-screen" data-alt="A highly detailed, cinematic 3D render of a futuristic hardcover book titled 'Architecting Intelligence'. The cover features an intricate, glowing neon blue neural network pattern set against a deep, light-absorbing pitch-black background. Subtle holographic reflections run along the edge of the pages. The lighting is dramatic and moody, characteristic of a premium dark-mode technology aesthetic, emphasizing the high-fidelity texture of the book's surface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDghZBKtteixSzb2IIvqxEML_OlAjNH7EQh81NaqtLVh2NqUGlviG9jNdMa5F7yRToHiaNHXpblTUsf4tgrZxqIBQil6ovXlYuDlrjnKtO1f8c_Y4rC54tomkUY1VEDmFaKUkaeTEYoA1SdmmFqVVJNKfTbDxJb0dhoZNMtdt7IIj0Ia4Ts0yLsGjLaJ38Apw0a6Kuf92te4W6dKm6Q1Z1RJa3HcJJGLB2MeV_x1tHXJ8AGom3EZ1Dcu8fD2dcqhs26jIFCO7MbElo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-pitch-black via-transparent to-transparent"></div>
+<div class="absolute bottom-md left-md right-md">
+<h3 class="font-display-hero-mobile text-headline-lg text-pure-white uppercase leading-none mb-xs">Architecting<br/>Intelligence</h3>
+<p class="font-label-caps text-label-caps text-silver-mist">Dr. Elara Vance</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Inside the Data (Bento Grid) -->
+<section class="mb-section-gap">
+<h2 class="font-display-hero-mobile md:font-display-hero text-headline-lg md:text-display-hero text-pure-white mb-xl border-b border-surface-container-highest pb-md uppercase">Inside the Data</h2>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-md auto-rows-[minmax(200px,auto)]">
+<!-- Chapter List (Large Cell) -->
+<div class="md:col-span-8 bg-surface-container-low rounded-xl border border-white/5 p-lg flex flex-col relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 blur-[50px] rounded-full"></div>
+<h3 class="font-headline-md text-headline-md text-pure-white mb-md relative z-10">Core Modules</h3>
+<div class="flex flex-col gap-sm relative z-10 flex-1 overflow-y-auto">
+<div class="flex items-center justify-between border-b border-surface-container-highest pb-sm">
+<span class="font-label-caps text-label-caps text-silver-mist">01</span>
+<span class="font-body-lg text-body-lg text-pure-white flex-1 ml-md">The Midnight Architecture</span>
+<span class="material-symbols-outlined text-holographic-blue">lock_open</span>
+</div>
+<div class="flex items-center justify-between border-b border-surface-container-highest pb-sm">
+<span class="font-label-caps text-label-caps text-silver-mist">02</span>
+<span class="font-body-lg text-body-lg text-pure-white flex-1 ml-md">Quantum Data Structures</span>
+<span class="material-symbols-outlined text-surface-container-highest">lock</span>
+</div>
+<div class="flex items-center justify-between border-b border-surface-container-highest pb-sm">
+<span class="font-label-caps text-label-caps text-silver-mist">03</span>
+<span class="font-body-lg text-body-lg text-pure-white flex-1 ml-md">Ethical Node Mapping</span>
+<span class="material-symbols-outlined text-surface-container-highest">lock</span>
+</div>
+<div class="flex items-center justify-between border-b border-surface-container-highest pb-sm">
+<span class="font-label-caps text-label-caps text-silver-mist">04</span>
+<span class="font-body-lg text-body-lg text-pure-white flex-1 ml-md">Predictive Modeling at Scale</span>
+<span class="material-symbols-outlined text-surface-container-highest">lock</span>
+</div>
+</div>
+</div>
+<!-- Key Insights (Tall Cell) -->
+<div class="md:col-span-4 bg-deep-slate rounded-xl border border-holographic-blue/20 p-lg flex flex-col relative overflow-hidden shadow-[inset_0_0_20px_rgba(0,240,255,0.05)]">
+<h3 class="font-headline-md text-headline-md text-holographic-blue mb-md">Key Insights</h3>
+<ul class="flex flex-col gap-md">
+<li class="flex gap-sm">
+<span class="material-symbols-outlined text-tertiary">data_usage</span>
+<p class="font-body-md text-body-md text-silver-mist">Over 50+ detailed architectural diagrams.</p>
+</li>
+<li class="flex gap-sm">
+<span class="material-symbols-outlined text-tertiary">code</span>
+<p class="font-body-md text-body-md text-silver-mist">Production-ready code snippets for neural deployment.</p>
+</li>
+<li class="flex gap-sm">
+<span class="material-symbols-outlined text-tertiary">psychology</span>
+<p class="font-body-md text-body-md text-silver-mist">Cognitive flow analysis for AI systems.</p>
+</li>
+</ul>
+</div>
+<!-- Author Bio (Wide Cell) -->
+<div class="md:col-span-12 bg-charcoal-canvas rounded-xl p-0 flex flex-col md:flex-row overflow-hidden border border-white/5">
+<div class="md:w-1/3 relative h-64 md:h-auto">
+<img alt="Dr. Elara Vance" class="w-full h-full object-cover grayscale mix-blend-luminosity opacity-80" data-alt="A dramatic, high-contrast portrait of a female AI researcher, Dr. Elara Vance. She is looking thoughtfully off-camera. The lighting is cinematic, casting deep shadows that contrast with a subtle, glowing holographic blue rim light on her profile. The background is pitch-black, emphasizing a serious, futuristic, and premium technological atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCH-zYz2injRAL6pfkpx7LY4dOyjywfFVy9VkzU733TbZyPr4TDTnvsWKjGwGCvy5S9MP4NR6wx6q4veVFj7wqkw0ZSt7Sfuejmvh2unqh2q6pahRBXAFZ7hgX4V8SrNnBUMSnY-nXNI1ll8fJLHQ47eWIxo5-AleReLkUMrDkdKiDod0C9-_7dgnybC9xoBdog3cd1VS-GCp0HInsNtRpRZV7j5McsckVo3ZtugrSHrUZhxi3G08_kQ-jadMo5Yz_zJ-naiXa3Fkk"/>
+<div class="absolute inset-0 bg-gradient-to-r from-transparent to-background/90 md:to-background"></div>
+</div>
+<div class="md:w-2/3 p-lg flex flex-col justify-center relative z-10 bg-background/90 md:bg-transparent">
+<span class="font-label-caps text-label-caps text-primary uppercase mb-xs">The Architect</span>
+<h3 class="font-headline-md text-headline-md text-pure-white mb-sm">Dr. Elara Vance</h3>
+<p class="font-body-md text-body-md text-silver-mist max-w-[600px]">
+                            Former Lead Data Scientist at Global AI Initiatives. Dr. Vance has pioneered methodologies in unsupervised learning that have reshaped the industry. 'Architecting Intelligence' is the distillation of a decade spent at the bleeding edge of neural network design.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing Card Section -->
+<section class="mb-section-gap flex justify-center">
+<div class="w-full max-w-[600px] bg-surface-container-high rounded-xl border border-surface-container-highest p-xl text-center relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary-container to-transparent"></div>
+<h2 class="font-headline-md text-headline-md text-pure-white mb-sm">Unlock the Architecture</h2>
+<p class="font-body-md text-body-md text-silver-mist mb-lg">Instant access to the complete digital manuscript, high-res diagrams, and future updates.</p>
+<div class="font-display-hero-mobile text-display-hero-mobile text-pure-white mb-lg">$49 <span class="font-body-md text-body-md text-silver-mist align-middle">USD</span></div>
+<button class="w-full bg-primary-container text-pure-white font-headline-md text-headline-md py-md rounded-xl hover:bg-primary-fixed hover:text-on-primary-fixed transition-all duration-300 shadow-[0_10px_30px_rgba(227,38,82,0.2)]">
+                    Purchase eBook
+                </button>
+</div>
+</section>
+<!-- Reviews Section -->
+<section class="mb-section-gap">
+<h2 class="font-display-hero-mobile md:font-display-hero text-headline-lg md:text-display-hero text-pure-white mb-xl uppercase text-center">System Feedback</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+<!-- Review Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-lg border border-white/5 shadow-[inset_0_2px_10px_rgba(255,255,255,0.02)]">
+<div class="flex text-tertiary mb-sm">
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-silver-mist mb-md">"A paradigm-shifting text. Vance maps out complex neural topologies with terrifying clarity. Essential reading for any senior developer."</p>
+<div class="font-label-caps text-label-caps text-pure-white uppercase">- J. Sterling, Principal Engineer</div>
+</div>
+<!-- Review Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-lg border border-white/5 shadow-[inset_0_2px_10px_rgba(255,255,255,0.02)] relative overflow-hidden">
+<div class="absolute -right-lg -top-lg w-24 h-24 bg-holographic-blue/10 blur-[30px] rounded-full"></div>
+<div class="flex text-tertiary mb-sm relative z-10">
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-silver-mist mb-md relative z-10">"The chapters on Ethical Node Mapping alone justify the price. This is the new standard textbook for AI architecture."</p>
+<div class="font-label-caps text-label-caps text-pure-white uppercase relative z-10">- Dr. M. Lin, AI Ethics Board</div>
+</div>
+<!-- Review Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-lg border border-white/5 shadow-[inset_0_2px_10px_rgba(255,255,255,0.02)]">
+<div class="flex text-tertiary mb-sm">
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-surface-container-highest" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-silver-mist mb-md">"Dense, challenging, and profoundly necessary. Not for beginners, but a masterclass for practitioners."</p>
+<div class="font-label-caps text-label-caps text-pure-white uppercase">- TechNode Review</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-pitch-black full-width py-xl mt-section-gap border-t border-surface-container-highest flex flex-col items-center gap-md px-margin-desktop w-full">
+<div class="font-display-hero text-headline-md text-primary-container">
+            AETHER AI
+        </div>
+<ul class="flex flex-wrap justify-center gap-md">
+<li><a class="font-label-caps text-label-caps text-silver-mist hover:text-tertiary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="font-label-caps text-label-caps text-silver-mist hover:text-tertiary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="font-label-caps text-label-caps text-silver-mist hover:text-tertiary transition-colors" href="#">AI Ethics Charter</a></li>
+<li><a class="font-label-caps text-label-caps text-silver-mist hover:text-tertiary transition-colors" href="#">Global Partners</a></li>
+</ul>
+<div class="font-label-caps text-label-caps text-silver-mist text-center mt-sm">
+            © 2024 AETHER GLOBAL AI EDUCATION. REDEFINING INTELLIGENCE.
+        </div>
+</footer>
+</body></html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AETHER AI - Instructor Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Inter:wght@400;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "deep-slate": "#272c33",
+                      "tertiary": "#00dbe9",
+                      "on-tertiary": "#00363a",
+                      "surface-container-highest": "#343538",
+                      "error": "#ffb4ab",
+                      "surface-tint": "#ffb2b8",
+                      "secondary-fixed-dim": "#b6d300",
+                      "on-primary-fixed-variant": "#91002c",
+                      "surface-container-low": "#1a1b1e",
+                      "on-secondary": "#2c3400",
+                      "surface-dim": "#121316",
+                      "on-tertiary-fixed-variant": "#004f54",
+                      "silver-mist": "#9ea0a9",
+                      "on-secondary-fixed": "#181e00",
+                      "surface-container-high": "#292a2d",
+                      "pitch-black": "#000000",
+                      "surface": "#121316",
+                      "primary-container": "#e32652",
+                      "on-tertiary-fixed": "#002022",
+                      "inverse-surface": "#e3e2e6",
+                      "on-tertiary-container": "#000607",
+                      "background": "#121316",
+                      "secondary-container": "#d0f100",
+                      "on-error": "#690005",
+                      "on-secondary-fixed-variant": "#404c00",
+                      "inverse-primary": "#be003d",
+                      "secondary": "#ffffff",
+                      "on-primary-container": "#ffffff",
+                      "on-background": "#e3e2e6",
+                      "primary-fixed": "#ffdadb",
+                      "outline-variant": "#5b3f41",
+                      "on-surface": "#e3e2e6",
+                      "primary-fixed-dim": "#ffb2b8",
+                      "secondary-fixed": "#d0f100",
+                      "surface-bright": "#38393c",
+                      "on-secondary-container": "#5c6b00",
+                      "on-primary-fixed": "#40000f",
+                      "on-error-container": "#ffdad6",
+                      "tertiary-fixed": "#7df4ff",
+                      "on-surface-variant": "#e4bdbf",
+                      "primary": "#ffb2b8",
+                      "tertiary-fixed-dim": "#00dbe9",
+                      "outline": "#ab888a",
+                      "graphite-base": "#0d0d0e",
+                      "surface-container": "#1e2022",
+                      "error-container": "#93000a",
+                      "pure-white": "#ffffff",
+                      "surface-container-lowest": "#0d0e11",
+                      "on-primary": "#67001d",
+                      "surface-variant": "#343538",
+                      "inverse-on-surface": "#2f3033",
+                      "tertiary-container": "#00848d",
+                      "holographic-blue": "#00f0ff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "md": "24px",
+                      "gutter": "24px",
+                      "sm": "16px",
+                      "lg": "48px",
+                      "margin-desktop": "64px",
+                      "margin-mobile": "16px",
+                      "xs": "8px",
+                      "section-gap": "112px",
+                      "xl": "80px",
+                      "base": "4px"
+              },
+              "fontFamily": {
+                      "display-hero": [
+                              "anton"
+                      ],
+                      "label-caps": [
+                              "inter"
+                      ],
+                      "body-md": [
+                              "inter"
+                      ],
+                      "headline-md": [
+                              "inter"
+                      ],
+                      "headline-lg": [
+                              "anton"
+                      ],
+                      "body-lg": [
+                              "inter"
+                      ],
+                      "display-hero-mobile": [
+                              "anton"
+                      ]
+              },
+              "fontSize": {
+                      "display-hero": [
+                              "80px",
+                              {
+                                      "lineHeight": "0.9",
+                                      "letterSpacing": "-0.04em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "20px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-hero-mobile": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+          font-family: 'Material Symbols Outlined';
+          font-weight: normal;
+          font-style: normal;
+          font-size: 24px;
+          line-height: 1;
+          letter-spacing: normal;
+          text-transform: none;
+          display: inline-block;
+          white-space: nowrap;
+          word-wrap: normal;
+          direction: ltr;
+          -webkit-font-feature-settings: 'liga';
+          -webkit-font-smoothing: antialiased;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased selection:bg-holographic-blue selection:text-pitch-black">
+<!-- Top Navigation -->
+<header class="bg-background/80 backdrop-blur-xl docked full-width top-0 sticky z-50 border-b border-white/10 flat no shadows flex justify-between items-center px-margin-desktop py-md max-w-[1440px] mx-auto w-full">
+<div class="flex items-center gap-md">
+<a class="font-display-hero text-headline-lg uppercase text-primary" href="08-main-landing-page.html">AETHER AI</a>
+</div>
+<nav class="hidden md:flex items-center gap-lg">
+<a class="font-headline-md text-headline-md tracking-tight text-on-surface/70 hover:text-on-surface transition-colors pb-2 hover:text-holographic-blue transition-all duration-300 scale-95 active:scale-90 duration-200" href="05-explore-courses.html">Courses</a>
+<a class="font-headline-md text-headline-md tracking-tight text-tertiary border-b-2 border-tertiary font-bold pb-2 hover:text-holographic-blue transition-all duration-300 scale-95 active:scale-90 duration-200" href="08-main-landing-page.html">Instructors</a>
+<a class="font-headline-md text-headline-md tracking-tight text-on-surface/70 hover:text-on-surface transition-colors pb-2 hover:text-holographic-blue transition-all duration-300 scale-95 active:scale-90 duration-200" href="05-explore-courses.html">Academy</a>
+<a class="font-headline-md text-headline-md tracking-tight text-on-surface/70 hover:text-on-surface transition-colors pb-2 hover:text-holographic-blue transition-all duration-300 scale-95 active:scale-90 duration-200" href="01-login.html">About</a>
+</nav>
+<div class="flex items-center gap-sm">
+<button class="hidden md:block font-label-caps text-label-caps text-on-background px-sm py-xs border border-white/20 rounded hover:bg-white/10 transition-colors">Sign In</button>
+<button class="font-label-caps text-label-caps bg-primary-container text-pure-white px-md py-xs rounded hover:bg-primary-container/80 transition-colors">Join Premium</button>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative w-full h-[819px] min-h-[600px] flex items-end pb-lg px-margin-desktop md:px-margin-desktop px-margin-mobile">
+<!-- Background Image -->
+<div class="absolute inset-0 z-0">
+<img alt="Instructor Portrait" class="w-full h-full object-cover object-center" data-alt="A dramatic, cinematic portrait of a visionary female AI researcher standing in a futuristic, dark-mode laboratory. The scene is lit with striking high-contrast lighting, casting deep shadows that contrast sharply with glowing holographic data visualizations projected in the background. The aesthetic is premium, moody, and highly sophisticated, relying on deep blacks, cool slates, and vibrant holographic blue light illuminating the subject's face and creating an aura of world-class intelligence and cutting-edge technology." src="https://lh3.googleusercontent.com/aida-public/AB6AXuACm3iWVP4C3eaq9h5CErigcICVmmojqYOMicPoKnvQ8_3dLN8YsZatiVh-0OuR2sdhKFT0SmG_EH7Wq5kKryxTSVkYEFqKbOzTkTNeCX2_8LoTQBshzuMLu0y5vdgrlCQnYITTrTjZOh9IZEEgjc_XpxpZBmDkHp6L8Lb95sbusKOVTkEcnH-pHFwTlTiHGojfUZVgrP61a37W3NAxhi4kwUU2UCHI1swYrF3Umfi7GpEr1H8aKdrYywcmI4DkJH4m1rqRI-H1hY4"/>
+<!-- Gradient Overlay for Text Readability -->
+<div class="absolute inset-0 bg-gradient-to-t from-pitch-black via-pitch-black/60 to-transparent"></div>
+</div>
+<!-- Content -->
+<div class="relative z-10 max-w-[1440px] mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-8">
+<h1 class="font-display-hero text-display-hero-mobile md:text-display-hero text-pure-white mb-sm">DR. ELARA VANCE</h1>
+<p class="font-headline-md text-headline-md text-silver-mist max-w-2xl">Pioneer in Neural Architecture Search and Generative adversarial networks. Former Lead AI Scientist at Quantum Dynamics.</p>
+</div>
+</div>
+</section>
+<!-- Classes Section -->
+<section class="max-w-[1440px] mx-auto px-margin-desktop md:px-margin-desktop px-margin-mobile py-section-gap">
+<h2 class="font-headline-lg text-headline-lg text-pure-white mb-lg">Classes by this Instructor</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md">
+<!-- Course Card 1 -->
+<div class="bg-deep-slate rounded-lg overflow-hidden group cursor-pointer border border-white/5 hover:border-holographic-blue/30 transition-colors">
+<div class="h-48 relative overflow-hidden">
+<div class="absolute inset-0 bg-holographic-blue/10 group-hover:bg-transparent transition-colors z-10"></div>
+<img alt="Course Image" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" data-alt="Abstract visualization of neural networks. Glowing, interconnected nodes and thin blue lines over a dark, deep slate background. The image feels dense with data and highly technical, representing advanced artificial intelligence architecture. Soft holographic glows highlight specific clusters, maintaining the high-contrast, cinematic dark mode aesthetic of the platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAP2NSAxo0rnwE68tTflcazJODPz_GJX4Tyc0bfXRAEovP_JJZ4xdmUQ-NUkDRwnF-64ALNfssX49h_Y5gCYY_F472IOoz3QWZDj24LzSrd1bYU_2x21-AeTIeZ32YIjG8lWc2Jx7U0HaSMAumxUNqGQibt15dDAZYOvbrtx1niQwM7UdKFl8aBVSoy4i4fAA6PMQ2S747Wbn_HLfGmwZOmd2uHm3NFvUcbmZrf_dXYRh21NhU4sEFQ9l3fvLrGTllfWu0FRsHG2-w"/>
+</div>
+<div class="p-md relative">
+<div class="absolute top-0 right-md -translate-y-1/2 bg-surface-container-highest px-xs py-base rounded text-silver-mist font-label-caps text-label-caps border border-white/10">ADVANCED</div>
+<h3 class="font-headline-md text-headline-md text-pure-white mb-xs group-hover:text-holographic-blue transition-colors">Neural Architecture Design</h3>
+<p class="font-body-md text-body-md text-silver-mist mb-md">Master the art of designing efficient and scalable neural networks from scratch.</p>
+<div class="flex items-center justify-between text-silver-mist font-label-caps text-label-caps">
+<span class="flex items-center gap-base"><span class="material-symbols-outlined text-[16px]">schedule</span> 12 Weeks</span>
+<span class="flex items-center gap-base"><span class="material-symbols-outlined text-[16px]">group</span> 4,200 Students</span>
+</div>
+</div>
+</div>
+<!-- Course Card 2 -->
+<div class="bg-deep-slate rounded-lg overflow-hidden group cursor-pointer border border-white/5 hover:border-holographic-blue/30 transition-colors">
+<div class="h-48 relative overflow-hidden">
+<div class="absolute inset-0 bg-holographic-blue/10 group-hover:bg-transparent transition-colors z-10"></div>
+<img alt="Course Image" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" data-alt="A sophisticated digital rendering representing generative AI processes. Flowing streams of glowing data particles in cool blues and silvers create abstract, fluid shapes against an infinite pitch-black background. The visual is crisp, modern, and conveys a sense of creation and endless possibility inherent in advanced machine learning models." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCd0ASDkUfL7x2z8NZRqXRti8EgEJ4gTUHGA8v4MT5jkzVHj4OOpIlZA9yPwiNt0xKS0jRC9BkewW_gxiES0PopfgvUuGyU16pELzIivR6UHkh3lm4pjdjG9ftJ0iqTs0WndNp2jSkY1pTrwr7D4ejmfaKZRG0rNWQQyEN3k7Z8NbnBYgvIGDvuhCEjBnfVkqMspYbwhjFpAVna5a3BQQw9g1LE5OBjVzmmVb3CAjuwWiPnD5Aag1fkKeYhMpo_eJ2wsUqd3NkZWts"/>
+</div>
+<div class="p-md relative">
+<div class="absolute top-0 right-md -translate-y-1/2 bg-surface-container-highest px-xs py-base rounded text-silver-mist font-label-caps text-label-caps border border-white/10">INTERMEDIATE</div>
+<h3 class="font-headline-md text-headline-md text-pure-white mb-xs group-hover:text-holographic-blue transition-colors">Generative Models</h3>
+<p class="font-body-md text-body-md text-silver-mist mb-md">Explore GANs, VAEs, and diffusion models in this comprehensive deep dive.</p>
+<div class="flex items-center justify-between text-silver-mist font-label-caps text-label-caps">
+<span class="flex items-center gap-base"><span class="material-symbols-outlined text-[16px]">schedule</span> 8 Weeks</span>
+<span class="flex items-center gap-base"><span class="material-symbols-outlined text-[16px]">group</span> 8,150 Students</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Key Insights Section (Glassmorphism) -->
+<section class="max-w-[1440px] mx-auto px-margin-desktop md:px-margin-desktop px-margin-mobile pb-section-gap relative">
+<!-- Background Radial Gradient for subtle lighting -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-holographic-blue/5 rounded-full blur-3xl pointer-events-none"></div>
+<h2 class="font-headline-lg text-headline-lg text-pure-white mb-lg relative z-10">Key Insights</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md relative z-10">
+<!-- Insight Card 1 -->
+<div class="bg-[rgba(34,35,38,0.7)] backdrop-blur-[20px] rounded-lg p-lg border border-holographic-blue/30 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-md opacity-20 group-hover:opacity-40 transition-opacity">
+<span class="material-symbols-outlined text-display-hero text-holographic-blue" style="font-size: 64px;">lightbulb</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-pure-white mb-sm">The Future of General Intelligence</h3>
+<p class="font-body-lg text-body-lg text-silver-mist leading-relaxed">"We are moving past single-task optimization. The next decade will be defined by models that can generalize across wildly different domains with minimal few-shot prompting. The architecture must evolve to support fluid, dynamic reasoning rather than static pattern recognition."</p>
+</div>
+<!-- Insight Card 2 -->
+<div class="bg-[rgba(34,35,38,0.7)] backdrop-blur-[20px] rounded-lg p-lg border border-holographic-blue/30 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-md opacity-20 group-hover:opacity-40 transition-opacity">
+<span class="material-symbols-outlined text-display-hero text-holographic-blue" style="font-size: 64px;">psychology</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-pure-white mb-sm">Ethical Alignment in Core Design</h3>
+<p class="font-body-lg text-body-lg text-silver-mist leading-relaxed">"Safety cannot be bolted on as an afterthought. True alignment requires embedding ethical constraints directly into the loss function during the initial training phase. It must be as fundamental to the network as learning to minimize error."</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-pitch-black full-width py-xl mt-section-gap border-t border-surface-container-highest flex flex-col items-center gap-md px-margin-desktop w-full">
+<div class="font-display-hero text-headline-md text-primary-container mb-sm">AETHER AI</div>
+<nav class="flex flex-wrap justify-center gap-md mb-md">
+<a class="font-label-caps text-label-caps text-silver-mist hover:text-tertiary transition-colors" href="#">Privacy Policy</a>
+<a class="font-label-caps text-label-caps text-silver-mist hover:text-tertiary transition-colors" href="#">Terms of Service</a>
+<a class="font-label-caps text-label-caps text-silver-mist hover:text-tertiary transition-colors" href="#">AI Ethics Charter</a>
+<a class="font-label-caps text-label-caps text-silver-mist hover:text-tertiary transition-colors" href="#">Global Partners</a>
+</nav>
+<p class="font-label-caps text-label-caps text-silver-mist opacity-50">© 2024 AETHER GLOBAL AI EDUCATION. REDEFINING INTELLIGENCE.</p>
+</footer>
+</body></html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AETHER AI - Redefining Intelligence</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "deep-slate": "#272c33",
+                        "tertiary": "#00dbe9",
+                        "on-tertiary": "#00363a",
+                        "surface-container-highest": "#343538",
+                        "error": "#ffb4ab",
+                        "surface-tint": "#ffb2b8",
+                        "secondary-fixed-dim": "#b6d300",
+                        "on-primary-fixed-variant": "#91002c",
+                        "surface-container-low": "#1a1b1e",
+                        "on-secondary": "#2c3400",
+                        "surface-dim": "#121316",
+                        "on-tertiary-fixed-variant": "#004f54",
+                        "silver-mist": "#9ea0a9",
+                        "on-secondary-fixed": "#181e00",
+                        "surface-container-high": "#292a2d",
+                        "pitch-black": "#000000",
+                        "surface": "#121316",
+                        "primary-container": "#e32652",
+                        "on-tertiary-fixed": "#002022",
+                        "inverse-surface": "#e3e2e6",
+                        "on-tertiary-container": "#000607",
+                        "background": "#121316",
+                        "secondary-container": "#d0f100",
+                        "on-error": "#690005",
+                        "on-secondary-fixed-variant": "#404c00",
+                        "inverse-primary": "#be003d",
+                        "secondary": "#ffffff",
+                        "on-primary-container": "#ffffff",
+                        "on-background": "#e3e2e6",
+                        "primary-fixed": "#ffdadb",
+                        "outline-variant": "#5b3f41",
+                        "on-surface": "#e3e2e6",
+                        "primary-fixed-dim": "#ffb2b8",
+                        "secondary-fixed": "#d0f100",
+                        "surface-bright": "#38393c",
+                        "on-secondary-container": "#5c6b00",
+                        "on-primary-fixed": "#40000f",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-fixed": "#7df4ff",
+                        "on-surface-variant": "#e4bdbf",
+                        "primary": "#ffb2b8",
+                        "tertiary-fixed-dim": "#00dbe9",
+                        "outline": "#ab888a",
+                        "graphite-base": "#0d0d0e",
+                        "surface-container": "#1e2022",
+                        "error-container": "#93000a",
+                        "pure-white": "#ffffff",
+                        "surface-container-lowest": "#0d0e11",
+                        "on-primary": "#67001d",
+                        "surface-variant": "#343538",
+                        "inverse-on-surface": "#2f3033",
+                        "tertiary-container": "#00848d",
+                        "holographic-blue": "#00f0ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "md": "24px",
+                        "gutter": "24px",
+                        "sm": "16px",
+                        "lg": "48px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "16px",
+                        "xs": "8px",
+                        "section-gap": "112px",
+                        "xl": "80px",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "display-hero": ["anton"],
+                        "label-caps": ["inter"],
+                        "body-md": ["inter"],
+                        "headline-md": ["inter"],
+                        "headline-lg": ["anton"],
+                        "body-lg": ["inter"],
+                        "display-hero-mobile": ["anton"]
+                    },
+                    "fontSize": {
+                        "display-hero": ["80px", { "lineHeight": "0.9", "letterSpacing": "-0.04em", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.1", "fontWeight": "400" }],
+                        "body-lg": ["20px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "display-hero-mobile": ["48px", { "lineHeight": "1.0", "letterSpacing": "-0.02em", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #121316; /* background */
+            color: #e3e2e6; /* on-background */
+        }
+        .holographic-card {
+            background: rgba(34, 35, 38, 0.7); /* surface-variant with opacity */
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 240, 255, 0.3); /* holographic-blue with opacity */
+        }
+        .ai-glow {
+            box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col font-body-md text-body-md overflow-x-hidden selection:bg-tertiary selection:text-on-tertiary">
+<!-- Top Navigation -->
+<nav class="bg-background/80 backdrop-blur-xl font-headline-md text-headline-md tracking-tight docked full-width top-0 sticky z-50 border-b border-white/10 flat no shadows flex justify-between items-center px-margin-desktop py-md max-w-1440 mx-auto w-full">
+<a class="font-display-hero text-headline-lg uppercase text-primary" href="08-main-landing-page.html">AETHER AI</a>
+<div class="hidden md:flex gap-gutter items-center">
+<a class="text-on-surface/70 hover:text-on-surface transition-colors pb-2 hover:text-holographic-blue transition-all duration-300 scale-95 active:scale-90 duration-200" href="05-explore-courses.html">Courses</a>
+<a class="text-on-surface/70 hover:text-on-surface transition-colors pb-2 hover:text-holographic-blue transition-all duration-300 scale-95 active:scale-90 duration-200" href="08-main-landing-page.html">Instructors</a>
+<a class="text-on-surface/70 hover:text-on-surface transition-colors pb-2 hover:text-holographic-blue transition-all duration-300 scale-95 active:scale-90 duration-200" href="05-explore-courses.html">Academy</a>
+<a class="text-on-surface/70 hover:text-on-surface transition-colors pb-2 hover:text-holographic-blue transition-all duration-300 scale-95 active:scale-90 duration-200" href="01-login.html">About</a>
+</div>
+<div class="flex items-center gap-sm">
+<button class="hidden md:flex text-on-surface/70 hover:text-on-surface transition-colors pb-2 font-headline-md text-headline-md hover:text-holographic-blue transition-all duration-300 scale-95 active:scale-90 duration-200">Sign In</button>
+<button class="bg-primary-container text-on-primary-container px-sm py-xs rounded-xl font-headline-md text-headline-md hover:bg-inverse-primary transition-colors duration-300 scale-95 active:scale-90 duration-200">Join Premium</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow flex flex-col">
+<!-- Hero Section -->
+<section class="w-full max-w-1440 mx-auto px-margin-mobile md:px-margin-desktop py-xl md:py-section-gap grid grid-cols-1 md:grid-cols-12 gap-gutter items-center relative">
+<!-- Subtle Background Glow -->
+<div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+<div class="absolute top-1/4 left-1/4 w-[800px] h-[800px] bg-primary-container/5 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-tertiary/5 rounded-full blur-[100px]"></div>
+</div>
+<!-- Left Content -->
+<div class="md:col-span-6 flex flex-col gap-lg z-10">
+<h1 class="font-display-hero-mobile text-display-hero-mobile md:font-display-hero md:text-display-hero text-pure-white uppercase">
+                    REDEFINING <br/> <span class="text-transparent bg-clip-text bg-gradient-to-r from-pure-white to-silver-mist">HUMAN POTENTIAL</span> <br/> THROUGH AI
+                </h1>
+<p class="font-body-lg text-body-lg text-silver-mist max-w-lg">
+                    Elevate your intelligence. Master the tools of tomorrow by learning directly from global leaders and advanced artificial architectures. The stage is set for your evolution.
+                </p>
+<div class="flex flex-col sm:flex-row gap-sm pt-sm">
+<button class="bg-primary-container text-on-primary-container px-lg py-md rounded-xl font-headline-md text-headline-md hover:bg-inverse-primary transition-colors duration-300 ai-glow">Start Your Journey</button>
+<button class="bg-transparent border border-pure-white text-pure-white px-lg py-md rounded-xl font-headline-md text-headline-md hover:bg-surface-container-highest transition-colors duration-300">View Curriculum</button>
+</div>
+</div>
+<!-- Right Visual -->
+<div class="md:col-span-6 relative z-10 w-full h-[500px] md:h-[700px] rounded-xl overflow-hidden group">
+<img alt="Cinematic High-Contrast AI Human Collaboration" class="absolute inset-0 w-full h-full object-cover rounded-xl transition-transform duration-700 group-hover:scale-105" data-alt="A cinematic, high-contrast digital artwork depicting an advanced AI hologram collaborating with a human professional in a sleek, dimly lit futuristic workspace. The scene is illuminated by dramatic, deep-shadow lighting that emphasizes the glowing, translucent holographic interface projecting complex data visualizations. The color palette relies on deep slate and pitch black, punctuated by piercing holographic blue and subtle raspberry accents. The overall aesthetic is highly technical, premium, and visionary, evoking a sense of exclusive access to world-class intelligence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8CbRkvgi7zuI0f-etwLq0qM5DC0o0_AgfqvyLDfsHerSi8Ux6gnVG9aPxCzXNMXXHyMe5x7_hG69sUqvrGxXzCbvwc4oQloO1bBmJ-epdFYBRIkm5_fxrd9VHUEXWIhMhNgJ-1n2bvZBeJhSZz3j2hqw3nGfFzJ-wWg04QSS8JPrCcL4JKTiywzHm_0-z-nfqGGDE_y5xOOJWm1_fz2cO4OnkB44NHWf14FWTF3LJIdETrHOFZoo_jwelfPRv_kXwul0eGeaUPSs"/>
+<!-- Holographic Overlay Element -->
+<div class="absolute bottom-md right-md holographic-card p-sm rounded-lg flex items-center gap-sm">
+<span class="material-symbols-outlined text-holographic-blue" style="font-variation-settings: 'FILL' 1;">network_intelligence</span>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-silver-mist">Processing Capacity</span>
+<span class="font-headline-md text-headline-md text-pure-white">ExaFLOPS Active</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Instructors Section -->
+<section class="w-full bg-graphite-base py-section-gap border-y border-surface-container-highest relative">
+<div class="max-w-1440 mx-auto px-margin-mobile md:px-margin-desktop flex flex-col gap-lg">
+<div class="flex flex-col md:flex-row justify-between items-end gap-sm">
+<div class="flex flex-col gap-xs">
+<span class="font-label-caps text-label-caps text-tertiary uppercase tracking-widest">Global Elite</span>
+<h2 class="font-display-hero-mobile text-display-hero-mobile md:font-headline-lg md:text-headline-lg text-pure-white uppercase">Learn from the <br/>Architects of the Future</h2>
+</div>
+<button class="text-tertiary hover:text-pure-white transition-colors flex items-center gap-xs font-headline-md text-headline-md">
+                        View All <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<!-- Instructor Carousel (Bento-ish Grid for demonstration) -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter overflow-hidden relative">
+<!-- Card 1 -->
+<div class="bg-deep-slate rounded-xl overflow-hidden group flex flex-col relative h-[450px]">
+<img alt="Instructor" class="w-full h-1/2 object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A dramatic, low-key portrait of a visionary female tech executive in her 40s. The lighting is cinematic, with deep shadows on one side of her face and a subtle, cool-toned rim light on the other, suggesting illumination from a glowing screen. She looks off-camera with an expression of intense focus. The background is a pure, light-absorbing pitch black. The style is premium, authoritative, and evocative of high-end editorial photography for an advanced AI education platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHbYYG0f5jO606O1fGlRadn_I9SroIW6A7LP88frIB7VLE4Rrqc8Ldt7Yna3GOQJmS2m7xOlmH4_iO4rwl7ov2bdRwmsiQRHxpifRJvI2q6Iy-q1RP5iaDxjeta8CFpgDXjsJrDR7S1_GOvmn_-i1MFF4v71ZCxay3hG0_xVksI_ANfuBr2KNhuVSYmfKuceSvSYRacrq4RC0-exLRFNdSoSNRU0YO7QO-dwA740YcCInPv74vd2H2t910CZGHFVKahjtb5TDRh3Y"/>
+<div class="p-sm flex flex-col gap-xs flex-grow justify-end relative z-10 bg-gradient-to-t from-deep-slate via-deep-slate to-transparent absolute inset-0">
+<span class="font-label-caps text-label-caps text-primary uppercase">Neural Architect</span>
+<h3 class="font-headline-md text-headline-md text-pure-white">Dr. Elena Rostova</h3>
+<p class="font-body-md text-body-md text-silver-mist mt-xs line-clamp-2">Pioneering the intersection of quantum computing and neural network design.</p>
+</div>
+</div>
+<!-- Card 2 (AI Focus) -->
+<div class="holographic-card rounded-xl overflow-hidden group flex flex-col relative h-[450px]">
+<div class="w-full h-1/2 bg-surface-container flex items-center justify-center relative overflow-hidden">
+<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-tertiary/20 to-transparent blur-md"></div>
+<span class="material-symbols-outlined text-[120px] text-holographic-blue/80 drop-shadow-[0_0_15px_rgba(0,240,255,0.5)]">psychology</span>
+</div>
+<div class="p-sm flex flex-col gap-xs flex-grow justify-end relative z-10">
+<span class="font-label-caps text-label-caps text-tertiary uppercase">Synthetic Entity</span>
+<h3 class="font-headline-md text-headline-md text-pure-white">AETHER Prime</h3>
+<p class="font-body-md text-body-md text-silver-mist mt-xs line-clamp-2">Our flagship AI tutor, continuously updated with global knowledge and strategic models.</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-deep-slate rounded-xl overflow-hidden group flex flex-col relative h-[450px]">
+<img alt="Instructor" class="w-full h-1/2 object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A high-contrast, moody portrait of a male data scientist in his 30s. He is lit by a strong, singular light source that creates dramatic highlights and deep, inky shadows across his face and dark clothing. The aesthetic is stark, minimalist, and deeply focused, reflecting a cinematic dark-mode style. The background is completely black, emphasizing his presence as a master of complex AI architecture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAs4jEU1Bt57ha-8ZfauOOmJfP3o4LKlvubOlhsl150GNPg3ttBlgnOrcTC6skU_lsJGyd6a_RkZ1-4t96xDASaZg0JQ7AY8dUJCYXkCAX4vSEBb1HCbK5cJHfHebsmrQ4EGEeZ-sJQJc9gXy0L-17k-PAj3L__7uhZOhqydKvN2-nVdrTLxqBwDyVZEFPA7iT3SMn5cDvpx8IiR5jOPcnMs-GJqgVY9OEDwug5kWBU_qNDC8TlbZfwsvypZrBkQm15sFbZJA4Hyps"/>
+<div class="p-sm flex flex-col gap-xs flex-grow justify-end relative z-10 bg-gradient-to-t from-deep-slate via-deep-slate to-transparent absolute inset-0">
+<span class="font-label-caps text-label-caps text-primary uppercase">Data Strategist</span>
+<h3 class="font-headline-md text-headline-md text-pure-white">Marcus Chen</h3>
+<p class="font-body-md text-body-md text-silver-mist mt-xs line-clamp-2">Mastering predictive models and large-scale data synthesis for enterprise applications.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Section -->
+<section class="w-full max-w-1440 mx-auto px-margin-mobile md:px-margin-desktop py-xl flex flex-col items-center gap-md">
+<h4 class="font-label-caps text-label-caps text-silver-mist uppercase tracking-widest text-center">Trusted by Global Intelligence Leaders</h4>
+<div class="flex flex-wrap justify-center items-center gap-lg opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+<!-- Abstract placeholders for logos -->
+<div class="flex items-center gap-xs text-silver-mist font-headline-md text-headline-md"><span class="material-symbols-outlined text-headline-lg">category</span> QUANTUM CORP</div>
+<div class="flex items-center gap-xs text-silver-mist font-headline-md text-headline-md"><span class="material-symbols-outlined text-headline-lg">hub</span> NEURAL DYNAMICS</div>
+<div class="flex items-center gap-xs text-silver-mist font-headline-md text-headline-md"><span class="material-symbols-outlined text-headline-lg">language</span> GLOBAL SYNC</div>
+<div class="flex items-center gap-xs text-silver-mist font-headline-md text-headline-md"><span class="material-symbols-outlined text-headline-lg">api</span> DATA FORGE</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-pitch-black text-silver-mist font-label-caps text-label-caps full-width py-xl mt-section-gap border-t border-surface-container-highest flat flex flex-col items-center gap-md px-margin-desktop w-full">
+<a class="font-display-hero text-headline-md text-primary-container" href="08-main-landing-page.html">AETHER AI</a>
+<div class="flex flex-wrap justify-center gap-md">
+<a class="text-silver-mist hover:text-tertiary transition-colors" href="#">Privacy Policy</a>
+<a class="text-silver-mist hover:text-tertiary transition-colors" href="#">Terms of Service</a>
+<a class="text-silver-mist hover:text-tertiary transition-colors" href="#">AI Ethics Charter</a>
+<a class="text-silver-mist hover:text-tertiary transition-colors" href="#">Global Partners</a>
+</div>
+<p class="text-silver-mist">© 2024 AETHER GLOBAL AI EDUCATION. REDEFINING INTELLIGENCE.</p>
+</footer>
+</body></html>
