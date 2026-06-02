@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AETHER AI - Premium eBook Library</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed": "#002022",
+                    "secondary": "#ffffff",
+                    "surface-container-high": "#292a2d",
+                    "tertiary": "#00dbe9",
+                    "on-primary": "#67001d",
+                    "holographic-blue": "#00f0ff",
+                    "on-error-container": "#ffdad6",
+                    "background": "#121316",
+                    "secondary-fixed-dim": "#b6d300",
+                    "surface": "#121316",
+                    "on-tertiary-container": "#000607",
+                    "on-tertiary": "#00363a",
+                    "surface-container-low": "#1a1b1e",
+                    "pure-white": "#ffffff",
+                    "pitch-black": "#000000",
+                    "inverse-surface": "#e3e2e6",
+                    "error-container": "#93000a",
+                    "silver-mist": "#9ea0a9",
+                    "deep-slate": "#272c33",
+                    "graphite-base": "#0d0d0e",
+                    "on-error": "#690005",
+                    "on-primary-container": "#ffffff",
+                    "surface-dim": "#121316",
+                    "surface-container-highest": "#343538",
+                    "primary-fixed": "#ffdadb",
+                    "error": "#ffb4ab",
+                    "on-tertiary-fixed-variant": "#004f54",
+                    "on-surface-variant": "#e4bdbf",
+                    "inverse-on-surface": "#2f3033",
+                    "primary-container": "#e32652",
+                    "surface-container-lowest": "#0d0e11",
+                    "on-primary-fixed": "#40000f",
+                    "outline": "#ab888a",
+                    "tertiary-fixed-dim": "#00dbe9",
+                    "surface-variant": "#343538",
+                    "on-primary-fixed-variant": "#91002c",
+                    "tertiary-container": "#00848d",
+                    "surface-container": "#1e2022",
+                    "on-background": "#e3e2e6",
+                    "surface-tint": "#ffb2b8",
+                    "secondary-fixed": "#d0f100",
+                    "on-secondary-container": "#5c6b00",
+                    "primary-fixed-dim": "#ffb2b8",
+                    "outline-variant": "#5b3f41",
+                    "surface-bright": "#38393c",
+                    "inverse-primary": "#be003d",
+                    "secondary-container": "#d0f100",
+                    "on-secondary-fixed-variant": "#404c00",
+                    "on-surface": "#e3e2e6",
+                    "tertiary-fixed": "#7df4ff",
+                    "on-secondary": "#2c3400",
+                    "on-secondary-fixed": "#181e00",
+                    "primary": "#ffb2b8"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "md": "24px",
+                    "gutter": "24px",
+                    "xl": "80px",
+                    "margin-desktop": "64px",
+                    "lg": "48px",
+                    "section-gap": "112px",
+                    "xs": "8px",
+                    "sm": "16px",
+                    "margin-mobile": "16px",
+                    "base": "4px"
+            },
+            "fontFamily": {
+                    "body-lg": [
+                            "inter"
+                    ],
+                    "headline-md": [
+                            "inter"
+                    ],
+                    "display-hero-mobile": [
+                            "anton"
+                    ],
+                    "display-hero": [
+                            "anton"
+                    ],
+                    "label-caps": [
+                            "inter"
+                    ],
+                    "headline-lg": [
+                            "anton"
+                    ],
+                    "body-md": [
+                            "inter"
+                    ]
+            },
+            "fontSize": {
+                    "body-lg": [
+                            "20px",
+                            {
+                                    "lineHeight": "1.5",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-md": [
+                            "32px",
+                            {
+                                    "lineHeight": "1.3",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "display-hero-mobile": [
+                            "48px",
+                            {
+                                    "lineHeight": "1.0",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "display-hero": [
+                            "80px",
+                            {
+                                    "lineHeight": "0.9",
+                                    "letterSpacing": "-0.04em",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "label-caps": [
+                            "12px",
+                            {
+                                    "lineHeight": "1.0",
+                                    "letterSpacing": "0.1em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "headline-lg": [
+                            "48px",
+                            {
+                                    "lineHeight": "1.1",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "1.5",
+                                    "fontWeight": "400"
+                            }
+                    ]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #121316; /* background */
+            color: #e3e2e6; /* on-surface */
+        }
+        /* Custom scrollbar for webkit */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0d0d0e; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #343538; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #00f0ff; 
+        }
+        
+        .holographic-card {
+            background: rgba(34, 35, 38, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 240, 255, 0.3);
+        }
+    </style>
+</head>
+<body class="flex h-screen overflow-hidden font-body-md text-body-md selection:bg-holographic-blue selection:text-pitch-black">
+<!-- Shared Component: SideNavBar -->
+<nav class="docked left-0 h-full w-64 border-r border-holographic-blue/20 bg-pitch-black/90 backdrop-blur-3xl shadow-[0_0_40px_rgba(0,240,255,0.1)] fixed left-0 top-0 h-full flex flex-col pt-32 pb-8 z-50 hidden md:flex">
+<!-- Header / Identity -->
+<div class="px-md mb-xl flex flex-col items-start">
+<div class="font-display-hero text-headline-md text-primary mb-sm uppercase tracking-widest">AETHER AI</div>
+<div class="flex items-center gap-sm mt-md bg-graphite-base/50 p-xs rounded-lg w-full">
+<div class="w-10 h-10 rounded-full bg-deep-slate overflow-hidden border border-surface-container-highest">
+<div class="w-full h-full bg-cover bg-center" data-alt="A cinematic, high-contrast portrait of a futuristic AI explorer. The user profile photo is illuminated by subtle holographic blue light in a dark, atmospheric setting. The mood is serious, intelligent, and highly advanced, fitting a premium digital platform." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC37utrpJHfRuM_ibbVVY9YlgkguW4ILCvwi8YEbRYG3uZuOXI8QO0LLV7cRxsmapGLytbdu0DVWMqLSUKqu8hTm0fM1HGdiCmrqrAi-hHWwczceb_vhtWYzun6THWNSMUdxvZIJ6zmu5eCFAcwJcQnTLVQOJpf6JDY4IYSth6jxgfzMXqn8XyeVvpkyyGN7589r0j_pNZoWdgrKrnBNdM-_rkunJz5hTBg3aoxvCYSV4WgroleN6aqRzFlwFYzOkHY7rMSbiMfQok')"></div>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-pure-white font-bold">Welcome, Explorer</span>
+<span class="font-label-caps text-label-caps text-silver-mist">Level 4 Intelligence</span>
+</div>
+</div>
+</div>
+<!-- Navigation Links -->
+<ul class="flex-1 flex flex-col gap-base">
+<li>
+<a class="flex items-center gap-sm text-silver-mist hover:bg-surface-container px-md py-sm transition-all hover:bg-deep-slate hover:text-pure-white hover:translate-x-1 duration-300 w-full" href="08-main-landing-page.html">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">dashboard</span>
+<span class="font-body-md text-body-md">Dashboard</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-sm text-silver-mist hover:bg-surface-container px-md py-sm transition-all hover:bg-deep-slate hover:text-pure-white hover:translate-x-1 duration-300 w-full" href="05-explore-courses.html">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">school</span>
+<span class="font-body-md text-body-md">My Courses</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-sm text-silver-mist hover:bg-surface-container px-md py-sm transition-all hover:bg-deep-slate hover:text-pure-white hover:translate-x-1 duration-300 w-full" href="09-ebook-library.html">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">smart_toy</span>
+<span class="font-body-md text-body-md">AI Tutor</span>
+</a>
+</li>
+<!-- Active State Logic Applied to Resources -->
+<li>
+<a class="flex items-center gap-sm bg-tertiary-container/30 text-holographic-blue border-r-4 border-holographic-blue px-md py-sm hover:translate-x-1 duration-300 w-full" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">library_books</span>
+<span class="font-body-md text-body-md font-bold">Resources</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-sm text-silver-mist hover:bg-surface-container px-md py-sm transition-all hover:bg-deep-slate hover:text-pure-white hover:translate-x-1 duration-300 w-full mt-lg" href="09-ebook-library.html">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">settings</span>
+<span class="font-body-md text-body-md">Settings</span>
+</a>
+</li>
+</ul>
+<!-- Footer / CTA -->
+<div class="px-md mt-auto flex flex-col gap-sm">
+<button class="w-full py-sm rounded bg-surface-container border border-holographic-blue/30 text-holographic-blue font-label-caps text-label-caps flex justify-center items-center gap-xs hover:bg-holographic-blue/10 transition-colors">
+<span class="material-symbols-outlined text-[16px]">chat_spark</span>
+                Ask AI Assistant
+            </button>
+<div class="flex flex-col gap-base mt-sm border-t border-surface-container-highest pt-sm">
+<a class="flex items-center gap-sm text-silver-mist hover:text-pure-white transition-colors py-xs" href="#">
+<span class="material-symbols-outlined text-[18px]">help</span>
+<span class="font-body-md text-body-md text-[14px]">Help</span>
+</a>
+<a class="flex items-center gap-sm text-silver-mist hover:text-error transition-colors py-xs" href="#">
+<span class="material-symbols-outlined text-[18px]">logout</span>
+<span class="font-body-md text-body-md text-[14px]">Logout</span>
+</a>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-1 md:ml-64 h-full overflow-y-auto bg-background relative">
+<!-- Ambient Background Glow -->
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px] pointer-events-none z-0"></div>
+<!-- Hero Section: Book of the Month -->
+<section class="relative w-full min-h-[614px] flex items-end pb-lg pt-xl px-margin-mobile md:px-margin-desktop border-b border-surface-container-highest z-10">
+<!-- Hero Background Image with Overlay -->
+<div class="absolute inset-0 z-0 bg-pitch-black">
+<div class="absolute inset-0 bg-cover bg-center opacity-50 mix-blend-screen" data-alt="A highly detailed, cinematic rendering of an abstract geometric structure resembling a massive neural network or quantum computer. The scene is bathed in deep blacks and high-contrast glowing lines of white and subtle cyan. The style is hyper-realistic, dark mode, futuristic, and conveys monumental intelligence and complexity." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAapEjLOpaTgGEcBWDwcGuN8F8RS-a2MGKsWfaUPssIpEDS4CA_Gav0UYbiMS2w31xttDEZoli12pWHVfRU4xtWbQKdDvd8GPLMF4pJTc_yLZeqeLYUQ10oZotLYUEMMyJJg7k48IltnQIsI82Yn_-qzkEFvftKipbkhY4kLmKNm1yr5jl1DVtDWUq_GvN_cUBGlJb63Lu8ztqoLUjD3_HZvYM1SDX7fgzgkvY0dKxrM-J2NUbkuGLzxRljTJx8oqJPxg4W2VePjKs')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent"></div>
+</div>
+<div class="relative z-10 w-full max-w-[800px] flex flex-col gap-sm">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-caps text-label-caps text-primary tracking-[0.2em]">FEATURED BOOK OF THE MONTH</span>
+</div>
+<h1 class="font-display-hero text-display-hero-mobile md:text-display-hero text-pure-white uppercase mt-xs text-balance">
+                    The Architecture<br/>of Intelligence
+                </h1>
+<p class="font-body-lg text-body-lg text-silver-mist max-w-[600px] mt-sm">
+                    A comprehensive dive into the structural paradigms of generative models, written by leading architects of the AETHER cognitive framework.
+                </p>
+<div class="flex flex-wrap items-center gap-md mt-md">
+<button class="bg-primary-container hover:brightness-110 text-pure-white px-lg py-sm rounded flex items-center gap-sm transition-all duration-300 font-label-caps text-label-caps uppercase shadow-[0_0_20px_rgba(227,38,82,0.3)]">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">shopping_cart</span>
+                        Buy Now - $49.99
+                    </button>
+<div class="flex items-center gap-sm px-sm py-xs rounded border border-surface-container-highest bg-surface/50 backdrop-blur">
+<span class="material-symbols-outlined text-holographic-blue text-[18px]">psychiatry</span>
+<div class="flex flex-col">
+<span class="font-label-caps text-[10px] text-silver-mist">COMPLEXITY INDEX</span>
+<span class="font-body-md text-body-md text-holographic-blue font-bold leading-none">Level 9.8</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Category Filter Bar -->
+<section class="sticky top-0 z-40 bg-background/80 backdrop-blur-xl border-b border-surface-container-highest py-sm px-margin-mobile md:px-margin-desktop w-full overflow-x-auto no-scrollbar">
+<div class="flex gap-sm w-max">
+<button class="px-md py-xs rounded-full bg-pure-white text-pitch-black font-body-md text-body-md font-bold transition-colors shadow-[0_0_15px_rgba(255,255,255,0.2)]">All Publications</button>
+<button class="px-md py-xs rounded-full border border-surface-container-highest text-silver-mist hover:text-pure-white hover:border-holographic-blue transition-colors font-body-md text-body-md">Neural Networks</button>
+<button class="px-md py-xs rounded-full border border-surface-container-highest text-silver-mist hover:text-pure-white hover:border-holographic-blue transition-colors font-body-md text-body-md">AI Ethics</button>
+<button class="px-md py-xs rounded-full border border-surface-container-highest text-silver-mist hover:text-pure-white hover:border-holographic-blue transition-colors font-body-md text-body-md">Generative Design</button>
+<button class="px-md py-xs rounded-full border border-surface-container-highest text-silver-mist hover:text-pure-white hover:border-holographic-blue transition-colors font-body-md text-body-md">Quantum Computing</button>
+<button class="px-md py-xs rounded-full border border-surface-container-highest text-silver-mist hover:text-pure-white hover:border-holographic-blue transition-colors font-body-md text-body-md">Cognitive Systems</button>
+</div>
+</section>
+<!-- eBook Grid Section -->
+<section class="px-margin-mobile md:px-margin-desktop py-xl">
+<div class="flex justify-between items-end mb-lg">
+<h2 class="font-headline-lg text-headline-lg text-pure-white uppercase">Premium Library</h2>
+<span class="font-label-caps text-label-caps text-silver-mist hidden md:block">SHOWING 24 RESULTS</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-gutter">
+<!-- Card 1 -->
+<article class="bg-surface-container-low rounded-lg overflow-hidden border border-surface-container-highest hover:border-holographic-blue/50 transition-all duration-500 group relative flex flex-col h-[480px]">
+<div class="h-[260px] w-full relative overflow-hidden bg-pitch-black">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100" data-alt="A striking abstract digital artwork featuring fluid, generative lines of vibrant cyan and deep blue merging on a pure black background. The style is highly technical, smooth, and evokes the concept of artificial neural pathways. High contrast, cinematic lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDbNWkFtL-MxMztxe1dn7p1sfoMpFg-lctDol9eg18kjEuCDl66TN0enJr4mFnkPTHvVg0hGML5EWlkx1r7p8b1EgNXwgJc5Mk9U1QHgFMkdAFwGAQyCtKWPEyQv6yXn-ymJZdn3Jh0poBLo-bxD38RwgqTpKNMAUwCJcFwrG60md6jS-oOAun-kz83La1aKQZTVlrevOkaWH34FTh0qLFNHQd1qDhwtrF9QHbxZfl289vxd34j5SM6paDTgmu3xj_bmjq5OonxbBo')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low to-transparent opacity-80"></div>
+<div class="absolute top-sm right-sm bg-pitch-black/80 backdrop-blur border border-holographic-blue/30 px-sm py-xs rounded flex items-center gap-xs">
+<span class="material-symbols-outlined text-holographic-blue text-[14px]">graphic_eq</span>
+<span class="font-label-caps text-[10px] text-holographic-blue">C.I. 8.4</span>
+</div>
+</div>
+<div class="p-md flex flex-col flex-1 relative z-10 -mt-xl">
+<div class="flex flex-col gap-xs flex-1">
+<h3 class="font-headline-md text-[24px] leading-tight text-pure-white uppercase line-clamp-2 drop-shadow-md">Synaptic Echoes</h3>
+<p class="font-body-md text-body-md text-silver-mist">By Dr. Aris Vane</p>
+</div>
+<div class="flex justify-between items-center mt-auto pt-sm border-t border-surface-container-highest">
+<span class="font-body-lg text-body-lg text-pure-white">$24.00</span>
+<button class="text-holographic-blue hover:text-pure-white transition-colors">
+<span class="material-symbols-outlined">add_circle</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="bg-surface-container-low rounded-lg overflow-hidden border border-surface-container-highest hover:border-holographic-blue/50 transition-all duration-500 group relative flex flex-col h-[480px]">
+<div class="h-[260px] w-full relative overflow-hidden bg-pitch-black">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100 mix-blend-luminosity group-hover:mix-blend-normal" data-alt="A stark, minimalist photograph of a metallic server rack or high-tech monolithic structure in near total darkness. A single red glowing light punctuates the composition. The mood is imposing, silent, and highly structured, fitting a book on AI ethics and control." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDaTdSke2qTV_FFagiIWYq52NMVsnAQ5jBB_33XXgG4IOk8S4ZAWx7o0MDM1v8-GTfekWz2-yFAAIEM1TJNP-IUmx-Vsu_YLkQJcvabYWtoy3VnyrAlzt9rl7Vd3qLzqf06ZF8KmmwDq6NsBnMefcltVB5yE0o0UpqJfusN0RPsnqoUyfR3qoQboVnDCJNj6k5zXC0vM-HRYguoj1BfMxera423kaz3ElmaykIcEgBEwhw3SU4EDU4F1EMjh0aLJJb0Cqjnh9wsNOo')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low to-transparent opacity-80"></div>
+<div class="absolute top-sm right-sm bg-pitch-black/80 backdrop-blur border border-primary/30 px-sm py-xs rounded flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary text-[14px]">balance</span>
+<span class="font-label-caps text-[10px] text-primary">C.I. 9.1</span>
+</div>
+</div>
+<div class="p-md flex flex-col flex-1 relative z-10 -mt-xl">
+<div class="flex flex-col gap-xs flex-1">
+<h3 class="font-headline-md text-[24px] leading-tight text-pure-white uppercase line-clamp-2 drop-shadow-md">The Ethics of God-Code</h3>
+<p class="font-body-md text-body-md text-silver-mist">By M. Sterling</p>
+</div>
+<div class="flex justify-between items-center mt-auto pt-sm border-t border-surface-container-highest">
+<span class="font-body-lg text-body-lg text-pure-white">$32.50</span>
+<button class="text-holographic-blue hover:text-pure-white transition-colors">
+<span class="material-symbols-outlined">add_circle</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="bg-surface-container-low rounded-lg overflow-hidden border border-surface-container-highest hover:border-holographic-blue/50 transition-all duration-500 group relative flex flex-col h-[480px]">
+<div class="h-[260px] w-full relative overflow-hidden bg-pitch-black">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100" data-alt="A highly detailed close-up of a microchip or dense circuit board illuminated by an otherworldly, glowing holographic cyan light. The intricate metallic traces form a complex maze on a deep black substrate. The visual style is macro photography, cyberpunk, and hyper-technological." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDgsFHdmeaUul66FRi9hkNZVAm-afRk0RcRrjkrTm6FuLZQL7JvM7SVDDx7QzR1g6KSjs_9lNJi6kseqh2HNXH2I3P8LY9eaQMamZY-gnfJ_N3qfvbmGCqHPCGimEzEU9QGYLhmvhVegdNx4hMcFH2AJcv_TTywaInLKGkEV5xHg9hstoTTE_eYemdqcXLtmo7fz6lhd1JDNtHsqI9J3LCNDl4CAdnXPOT_QjXidsoiW2pAoMJnRbd2cHjX_mvJr6KNXq8-uNw6Fxw')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low to-transparent opacity-80"></div>
+<div class="absolute top-sm right-sm bg-pitch-black/80 backdrop-blur border border-holographic-blue/30 px-sm py-xs rounded flex items-center gap-xs">
+<span class="material-symbols-outlined text-holographic-blue text-[14px]">memory</span>
+<span class="font-label-caps text-[10px] text-holographic-blue">C.I. 7.5</span>
+</div>
+</div>
+<div class="p-md flex flex-col flex-1 relative z-10 -mt-xl">
+<div class="flex flex-col gap-xs flex-1">
+<h3 class="font-headline-md text-[24px] leading-tight text-pure-white uppercase line-clamp-2 drop-shadow-md">Hardware Substrates</h3>
+<p class="font-body-md text-body-md text-silver-mist">By J. T. Chen</p>
+</div>
+<div class="flex justify-between items-center mt-auto pt-sm border-t border-surface-container-highest">
+<span class="font-body-lg text-body-lg text-pure-white">$18.99</span>
+<button class="text-holographic-blue hover:text-pure-white transition-colors">
+<span class="material-symbols-outlined">add_circle</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 4 -->
+<article class="bg-surface-container-low rounded-lg overflow-hidden border border-surface-container-highest hover:border-holographic-blue/50 transition-all duration-500 group relative flex flex-col h-[480px]">
+<div class="h-[260px] w-full relative overflow-hidden bg-pitch-black">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100" data-alt="A view of Earth from space at night, heavily stylized to emphasize glowing city networks and data lines connecting continents. The continents are dark slate, while the lights are brilliant white and cyan, representing global AI processing nodes. Grand, sweeping, and cinematic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDBLdCusYb8Q0gjvGcKcYjhziexmlv4v8TzomsVFGkaFPx1rPpMsHOH2ET2fJtCviYVfjbvmxw9s-HC-3STQc4IWGXgCPli1Yus0Tf_Edc6MXCvswYBN-_M0j4L8QF2y7wAmMAXLHXcYEZCdtmuA0dwkNT0K7BxIYfEWXaswFYMMVdeF9jt_2yCrBIJZiFB_jkXLuXOB7dRvFpOIrr9W2T22diBy9X7f8nJgizPEkCfwDWFQRIVFlCMGlhIPhtHR49Wj1eocnBkD1I')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low to-transparent opacity-80"></div>
+<div class="absolute top-sm right-sm bg-pitch-black/80 backdrop-blur border border-holographic-blue/30 px-sm py-xs rounded flex items-center gap-xs">
+<span class="material-symbols-outlined text-holographic-blue text-[14px]">language</span>
+<span class="font-label-caps text-[10px] text-holographic-blue">C.I. 6.2</span>
+</div>
+</div>
+<div class="p-md flex flex-col flex-1 relative z-10 -mt-xl">
+<div class="flex flex-col gap-xs flex-1">
+<h3 class="font-headline-md text-[24px] leading-tight text-pure-white uppercase line-clamp-2 drop-shadow-md">Global Optimization</h3>
+<p class="font-body-md text-body-md text-silver-mist">By A. R. Lin</p>
+</div>
+<div class="flex justify-between items-center mt-auto pt-sm border-t border-surface-container-highest">
+<span class="font-body-lg text-body-lg text-pure-white">$21.00</span>
+<button class="text-holographic-blue hover:text-pure-white transition-colors">
+<span class="material-symbols-outlined">add_circle</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+<div class="mt-xl flex justify-center">
+<button class="px-lg py-sm border border-surface-container-highest rounded text-pure-white font-label-caps text-label-caps hover:border-holographic-blue hover:text-holographic-blue transition-colors">
+                    LOAD MORE VOLUMES
+                </button>
+</div>
+</section>
+<!-- Footer -->
+<footer class="full-width py-xl mt-section-gap border-t border-surface-container-highest bg-pitch-black flex flex-col items-center gap-md px-margin-desktop w-full">
+<div class="font-display-hero text-headline-md text-primary-container">AETHER AI</div>
+<div class="flex gap-md font-label-caps text-label-caps text-silver-mist">
+<a class="hover:text-tertiary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-tertiary transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-tertiary transition-colors" href="#">AI Ethics Charter</a>
+<a class="hover:text-tertiary transition-colors" href="#">Global Partners</a>
+</div>
+<div class="text-silver-mist font-label-caps text-[10px] mt-sm">
+                © 2024 AETHER GLOBAL AI EDUCATION. REDEFINING INTELLIGENCE.
+            </div>
+</footer>
+</main>
+</body></html>

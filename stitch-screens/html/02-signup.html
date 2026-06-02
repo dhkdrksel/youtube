@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sign Up | AETHER AI</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            -webkit-font-smoothing: antialiased;
+        }
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover, 
+        input:-webkit-autofill:focus {
+            -webkit-text-fill-color: #ffffff;
+            -webkit-box-shadow: 0 0 0px 1000px #000000 inset;
+            transition: background-color 5000s ease-in-out 0s;
+        }
+        .glow-overlay {
+            background: radial-gradient(circle at 50% 50%, rgba(227, 38, 82, 0.05) 0%, transparent 70%);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "holographic-blue": "#00f0ff",
+                      "surface-variant": "#343538",
+                      "secondary-fixed": "#d0f100",
+                      "secondary-container": "#d0f100",
+                      "surface-container-lowest": "#0d0e11",
+                      "on-background": "#e3e2e6",
+                      "surface-container-highest": "#343538",
+                      "on-error-container": "#ffdad6",
+                      "surface-bright": "#38393c",
+                      "pitch-black": "#000000",
+                      "tertiary-fixed-dim": "#00dbe9",
+                      "inverse-primary": "#be003d",
+                      "surface": "#121316",
+                      "error": "#ffb4ab",
+                      "background": "#121316",
+                      "on-secondary-container": "#5c6b00",
+                      "on-secondary": "#2c3400",
+                      "surface-container": "#1e2022",
+                      "on-secondary-fixed": "#181e00",
+                      "error-container": "#93000a",
+                      "surface-dim": "#121316",
+                      "on-tertiary": "#00363a",
+                      "tertiary-fixed": "#7df4ff",
+                      "primary-container": "#e32652",
+                      "on-primary-container": "#ffffff",
+                      "on-error": "#690005",
+                      "deep-slate": "#272c33",
+                      "primary-fixed": "#ffdadb",
+                      "pure-white": "#ffffff",
+                      "on-primary-fixed-variant": "#91002c",
+                      "secondary": "#ffffff",
+                      "on-surface": "#e3e2e6",
+                      "secondary-fixed-dim": "#b6d300",
+                      "primary": "#ffb2b8",
+                      "on-tertiary-fixed-variant": "#004f54",
+                      "surface-container-high": "#292a2d",
+                      "graphite-base": "#0d0d0e",
+                      "on-primary": "#67001d",
+                      "surface-container-low": "#1a1b1e",
+                      "primary-fixed-dim": "#ffb2b8",
+                      "on-surface-variant": "#e4bdbf",
+                      "on-tertiary-fixed": "#002022",
+                      "outline-variant": "#5b3f41",
+                      "on-tertiary-container": "#000607",
+                      "tertiary": "#00dbe9",
+                      "on-secondary-fixed-variant": "#404c00",
+                      "tertiary-container": "#00848d",
+                      "silver-mist": "#9ea0a9",
+                      "on-primary-fixed": "#40000f",
+                      "inverse-on-surface": "#2f3033",
+                      "surface-tint": "#ffb2b8",
+                      "outline": "#ab888a",
+                      "inverse-surface": "#e3e2e6"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "base": "4px",
+                      "xl": "80px",
+                      "md": "24px",
+                      "margin-mobile": "16px",
+                      "sm": "16px",
+                      "xs": "8px",
+                      "lg": "48px",
+                      "section-gap": "112px",
+                      "margin-desktop": "64px"
+              },
+              "fontFamily": {
+                      "headline-md": ["Inter"],
+                      "body-md": ["Inter"],
+                      "display-hero": ["Anton"],
+                      "label-caps": ["Inter"],
+                      "headline-lg": ["Anton"],
+                      "body-lg": ["Inter"],
+                      "display-hero-mobile": ["Anton"]
+              },
+              "fontSize": {
+                      "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                      "display-hero": ["80px", {"lineHeight": "0.9", "letterSpacing": "-0.04em", "fontWeight": "400"}],
+                      "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                      "headline-lg": ["48px", {"lineHeight": "1.1", "fontWeight": "400"}],
+                      "body-lg": ["20px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                      "display-hero-mobile": ["48px", {"lineHeight": "1.0", "letterSpacing": "-0.02em", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-pitch-black min-h-screen flex flex-col items-center justify-center relative overflow-hidden px-margin-mobile md:px-margin-desktop">
+<!-- Ambient Background Element -->
+<div class="fixed inset-0 glow-overlay pointer-events-none z-0"></div>
+<!-- Main Auth Canvas -->
+<main class="w-full max-w-[440px] z-10 flex flex-col items-center">
+<!-- Brand Identity -->
+<header class="mb-lg text-center animate-fade-in">
+<h1 class="font-headline-lg text-headline-lg text-pure-white tracking-[0.25em] uppercase mb-xs">
+                AETHER AI
+            </h1>
+<p class="font-label-caps text-label-caps text-silver-mist tracking-[0.4em] uppercase">
+                Initialize Protocol
+            </p>
+</header>
+<!-- Auth Card -->
+<div class="w-full bg-pitch-black/40 backdrop-blur-sm border border-pure-white/5 p-md md:p-lg flex flex-col gap-lg">
+<form class="flex flex-col gap-md" onsubmit="event.preventDefault()">
+<!-- Full Name Field -->
+<div class="group flex flex-col gap-xs">
+<label class="font-label-caps text-label-caps text-silver-mist uppercase">Legal Designation</label>
+<input class="w-full bg-transparent border border-pure-white px-md py-sm font-body-md text-pure-white placeholder:text-silver-mist/30 focus:ring-1 focus:ring-holographic-blue focus:border-holographic-blue outline-none transition-all duration-300 rounded-none" placeholder="FULL NAME" type="text"/>
+</div>
+<!-- Email Field -->
+<div class="group flex flex-col gap-xs">
+<label class="font-label-caps text-label-caps text-silver-mist uppercase">Network Identifier</label>
+<input class="w-full bg-transparent border border-pure-white px-md py-sm font-body-md text-pure-white placeholder:text-silver-mist/30 focus:ring-1 focus:ring-holographic-blue focus:border-holographic-blue outline-none transition-all duration-300 rounded-none" placeholder="EMAIL ADDRESS" type="email"/>
+</div>
+<!-- Password Field -->
+<div class="group flex flex-col gap-xs">
+<label class="font-label-caps text-label-caps text-silver-mist uppercase">Access Cipher</label>
+<div class="relative">
+<input class="w-full bg-transparent border border-pure-white px-md py-sm font-body-md text-pure-white placeholder:text-silver-mist/30 focus:ring-1 focus:ring-holographic-blue focus:border-holographic-blue outline-none transition-all duration-300 rounded-none" placeholder="SECURE PASSWORD" type="password"/>
+<button class="absolute right-md top-1/2 -translate-y-1/2 text-silver-mist hover:text-pure-white transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</div>
+</div>
+<!-- Primary CTA -->
+<button class="w-full bg-primary-container text-on-primary-container font-headline-md text-[18px] py-sm rounded-xl mt-base hover:opacity-90 active:scale-[0.98] transition-all duration-200 tracking-wide uppercase">
+                    Create Account
+                </button>
+</form>
+<!-- Social/Alt Auth Separation -->
+<div class="flex items-center gap-md">
+<div class="h-[1px] flex-1 bg-white/10"></div>
+<span class="font-label-caps text-label-caps text-silver-mist">OR CONNECT VIA</span>
+<div class="h-[1px] flex-1 bg-white/10"></div>
+</div>
+<div class="grid grid-cols-2 gap-sm">
+<button class="flex items-center justify-center gap-xs border border-white/20 py-xs hover:bg-white/5 transition-all text-pure-white font-label-caps text-label-caps uppercase">
+<span class="material-symbols-outlined text-[18px]">terminal</span> GitHub
+                </button>
+<button class="flex items-center justify-center gap-xs border border-white/20 py-xs hover:bg-white/5 transition-all text-pure-white font-label-caps text-label-caps uppercase">
+<span class="material-symbols-outlined text-[18px]">key</span> Google
+                </button>
+</div>
+</div>
+<!-- Footer Navigation -->
+<footer class="mt-lg text-center">
+<p class="font-body-md text-silver-mist">
+                Already have an account? 
+                <a class="text-pure-white font-bold ml-xs hover:text-holographic-blue transition-colors border-b border-transparent hover:border-holographic-blue pb-0.5" href="01-login.html">
+                    Log In
+                </a>
+</p>
+</footer>
+</main>
+<!-- Decorative Corner Accents -->
+<div class="fixed top-gutter left-gutter w-12 h-12 border-t border-l border-white/10 pointer-events-none"></div>
+<div class="fixed top-gutter right-gutter w-12 h-12 border-t border-r border-white/10 pointer-events-none"></div>
+<div class="fixed bottom-gutter left-gutter w-12 h-12 border-b border-l border-white/10 pointer-events-none"></div>
+<div class="fixed bottom-gutter right-gutter w-12 h-12 border-b border-r border-white/10 pointer-events-none"></div>
+<!-- Data Stream Visual Effect (Subtle) -->
+<div class="fixed inset-0 opacity-[0.03] pointer-events-none mix-blend-screen overflow-hidden">
+<div class="absolute inset-0 bg-[linear-gradient(rgba(0,240,255,0.1)_1px,transparent_1px)] bg-[size:100%_40px] animate-pulse"></div>
+</div>
+<script>
+        // Simple animation trigger for the entrance
+        document.addEventListener('DOMContentLoaded', () => {
+            const main = document.querySelector('main');
+            main.style.opacity = '0';
+            main.style.transform = 'translateY(20px)';
+            
+            setTimeout(() => {
+                main.style.transition = 'all 1s cubic-bezier(0.16, 1, 0.3, 1)';
+                main.style.opacity = '1';
+                main.style.transform = 'translateY(0)';
+            }, 100);
+        });
+
+        // Hover interaction for inputs to add subtle blue glow to background
+        const inputs = document.querySelectorAll('input');
+        inputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                document.querySelector('.glow-overlay').style.background = 'radial-gradient(circle at 50% 50%, rgba(0, 240, 255, 0.08) 0%, transparent 70%)';
+            });
+            input.addEventListener('blur', () => {
+                document.querySelector('.glow-overlay').style.background = 'radial-gradient(circle at 50% 50%, rgba(227, 38, 82, 0.05) 0%, transparent 70%)';
+            });
+        });
+    </script>
+</body></html>
