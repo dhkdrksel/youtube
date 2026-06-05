@@ -1,77 +1,55 @@
-import datetime
-from typing import Dict, Any, List
+# FastAPI (가정)를 사용한 kpi_service.py 구조 정의
+from datetime import date
+from typing import List, Dict
 
-class KPIService:
+class KPISummary(BaseModel):
+    name: str
+    unit: str
+    baseline: float # A/B 테스트 기준 값
+    current: float # 최신 측정값
+    change_pct: str = "" # 변화율 (예: "+30%")
+
+class DetailedMetrics(BaseModel):
+    total_sessions: Dict[str, Any]
+    unique_users: Dict[str, Any]
+
+class ABTestDetails(BaseModel):
+    active_hypothesis: str
+    significance_level: str
+    suggested_action: str = "" # 비즈니스 분석 결과 반영 지점 (현빈/Business)
+
+class DashboardResponse(BaseModel):
+    status: str = "success"
+    data: Dict[str, Any]
+
+# 실제 데이터베이스 연동 및 KPI 계산 로직이 들어갈 부분
+def fetch_dashboard_kpis(date: date, test_group: str = None) -> DashboardResponse:
     """
-    KPI 데이터를 수집하고 계산하는 비즈니스 로직 서비스.
-    데이터 정합성 및 KPI 연산의 책임을 가짐.
+    A/B 테스트 데이터를 종합하여 대시보드에 필요한 핵심 지표를 조회합니다.
+    [안정성 검증 포인트]: 모든 API 호출은 트랜잭션 단위로 묶고, 실패 시 Fallback 값(예: 'N/A')을 반환해야 합니다.
     """
-    def __init__(self):
-        # 현빈님의 API 스펙에 맞춰 필요한 외부 데이터 소스 연결 (예: A/B Test DB, GA API)
-        pass
+    # TODO: 실제 DB Query 및 복잡한 통계 계산 로직 구현 필요
+    summary = [
+        KPISummary(name="전환율 (CVR)", unit="%", baseline=0.05, current=0.065, change_pct="+30%"),
+        KPISummary(name="페이지 체류 시간", unit="초", baseline=120, current=155, change_pct="+29%")
+    ]
+    metrics = DetailedMetrics(
+        total_sessions={"value": 12000, "change_pct": "-5%"},
+        unique_users={"value": 9800, "change_pct": "+1.2%"}
+    )
+    ab_details = ABTestDetails(
+        active_hypothesis="체류 시간 증대를 통한 구매 의도 강화",
+        significance_level="p < 0.05 (유의미)",
+        suggested_action="헤드라인 문구 수정 필요"
+    )
 
-    def fetch_ab_test_data(self, experiment_id: str) -> Dict[str, Any]:
-        """
-        특정 실험 ID의 원본 데이터를 가상으로 가져오는 함수.
-        실제 구현 시에는 외부 DB/API 호출 로직이 들어갑니다.
-        """
-        # 실제로는 여기에 데이터베이스 쿼리나 외부 API 호출 코드가 위치합니다.
-        print(f"INFO: Fetching raw data for experiment {experiment_id}...")
-        return {
-            'A': {'views': 1000, 'conversions': 50, 'time_spent': 120},
-            'B': {'views': 950, 'conversions': 60, 'time_spent': 140}
-        }
+    return DashboardResponse(data={
+        "kpi_summary": summary,
+        "detailed_metrics": metrics.model_dump(), # Pydantic v2 기준
+        "ab_test_details": ab_details.model_dump()
+    })
 
-    def calculate_kpis(self, raw_data: Dict[str, Any]) -> Dict[str, float]:
-        """
-        원본 데이터를 기반으로 핵심 KPI (전환율, 체류 시간 등)를 계산합니다.
-        KPI = (Conversions / Views) * 100
-        """
-        kpis = {}
-
-        # A 그룹 분석
-        data_a = raw_data['A']
-        views_a = data_a['views']
-        conv_a = data_a['conversions']
-        time_a = data_a['time_spent']
-        
-        kpis[f'conversion_rate_A'] = (conv_a / views_a) * 100 if views_a else 0.0
-        kpis[f'avg_time_A'] = time_a / views_a if views_a else 0.0
-
-        # B 그룹 분석
-        data_b = raw_data['B']
-        views_b = data_b['views']
-        conv_b = data_b['conversions']
-        time_b = data_b['time_spent']
-        
-        kpis[f'conversion_rate_B'] = (conv_b / views_b) * 100 if views_b else 0.0
-        kpis[f'avg_time_B'] = time_b / views_b if views_b else 0.0
-        
-        return kpis
-
-    def generate_dashboard_data(self, experiment_id: str) -> Dict[str, Any]:
-        """
-        대시보드에 필요한 모든 형태의 데이터를 통합하여 반환합니다. (단일 책임 원칙 준수)
-        """
-        raw_data = self.fetch_ab_test_data(experiment_id)
-        kpis = self.calculate_kpis(raw_data)
-
-        # 최종 결과 포맷팅
-        result = {
-            "metadata": {
-                "last_updated": datetime.datetime.now().isoformat(),
-                "experiment_id": experiment_id,
-                "status": "SUCCESS"
-            },
-            "kpi_metrics": kpis,
-            "raw_data_summary": raw_data # 디버깅 및 투명성을 위해 원본 데이터 요약 포함
-        }
-        return result
-
-# 테스트 코드: 이 파일이 모듈로 사용됨을 전제합니다.
-if __name__ == '__main__':
-    service = KPIService()
-    test_result = service.generate_dashboard_data("ab-test-v1")
-    import json
-    print("\n--- KPI Service Test Result ---")
-    print(json.dumps(test_result, indent=4))
+# API 라우터 설정 예시 (실제 FastAPI 코드)
+# @router.get("/kpi/dashboard")
+# def get_kpi_data(date: Optional[date] = None, test_group: Optional[str] = None):
+#     return fetch_dashboard_kpis(date, test_group)
